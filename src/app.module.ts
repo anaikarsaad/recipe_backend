@@ -13,10 +13,10 @@ import { User,UserModel } from './user/schema/user.schema';
       isGlobal:true
     }),
     MongooseModule.forRoot(process.env.DB_URI),
-    MongooseModule.forFeature([{ name: 'User', schema: UserModel }]),
     UserModule,
     AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
+
 export class AppModule {}
